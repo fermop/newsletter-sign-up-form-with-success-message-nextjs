@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+:root {
+  --primary-red: hsl(4, 100%, 67%);
+
+  --neutral-blue-800: hsl(234, 29%, 20%);
+  --neutral-blue-700: hsl(235, 18%, 26%);
+  --neutral-grey: hsl(0, 0%,58%);
+}
+
+@theme inline {
+  --color-primary-red: var(--primary-red);
+
+  --color-neutral-blue-800: var(--neutral-blue-800);
+  --color-neutral-blue-700: var(--neutral-blue-700);
+  --color-neutral-grey: var(--neutral-grey);
+
+  --font-roboto: var(--font-roboto);
+}
