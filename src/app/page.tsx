@@ -1,33 +1,13 @@
+import Card from "@/components/Card";
+
 export default function Home() {
   return (
-    <div className="">
-      {/* Sign-up form start */}
+    <div>
+      <main className="min-h-dvh grid place-items-center">
+        <h1 className="sr-only">Frontend Mentor | Newsletter sign-up form with success message with Next.js</h1>
 
-      Stay updated!
-
-      Join 60,000+ product managers receiving monthly updates on:
-
-      Product discovery and building what matters
-      Measuring to ensure updates are a success
-      And much more!
-
-      Email address
-      email@company.com
-
-      Subscribe to monthly newsletter
-
-      {/* Sign-up form end */}
-
-      {/* Success message start */}
-
-      Thanks for subscribing!
-
-      A confirmation email has been sent to ash@loremcompany.com. 
-      Please open it and click the button inside to confirm your subscription.
-
-      Dismiss message
-
-      {/* Success message end */}
+        <Card />
+      </main>
     </div>
   );
 }
