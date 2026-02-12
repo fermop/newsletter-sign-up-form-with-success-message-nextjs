@@ -1,9 +1,14 @@
 import Image from 'next/image'
 import Button from '@/components/Button'
 
-export default function Form(props: any) {
-  const { email, error, handleChange, handleSubmit } = props
+interface FormProps {
+  email: string;
+  error: boolean;
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+}
 
+export default function Form({ email, error, handleChange, handleSubmit }: FormProps) {
   return (
     <div className='min-h-dvh w-screen lg:max-w-233 lg:min-h-fit lg:max-h-160 flex flex-col justify-between bg-white rounded-4xl lg:flex lg:flex-row-reverse lg:p-6 lg:pl-16 lg:gap-16 animate-fade-in-up'>
       <section>
@@ -76,6 +81,7 @@ export default function Form(props: any) {
         <form 
           className='grid gap-6'
           noValidate
+          onSubmit={handleSubmit}
         >
           <div className='relative grid gap-2'>
             <label htmlFor="email" className='text-sm font-bold cursor-pointer'>Email address</label>
@@ -86,7 +92,7 @@ export default function Form(props: any) {
               placeholder='email@company.com'
               className={`border border-neutral-grey rounded-lg px-6 py-4 outline-0 ${error ? 'focus:outline-primary-red border-primary-red bg-red-100 text-red-500 animate-shake' : 'focus:outline-1 outline-neutral-blue-800'}`}
               value={email}
-              onChange={handleChange()}
+              onChange={handleChange}
             />
 
             {error &&
@@ -98,7 +104,6 @@ export default function Form(props: any) {
             ariaLabel='Submit form'
             type='submit'
             value='Subscribe to monthly newsletter'
-            handleAction={handleSubmit}
           />
         </form>
       </section>
