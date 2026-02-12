@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Button from '@/components/Button'
 
-export default function SuccessMessage(props) {
+export default function SuccessMessage(props: any) {
   const { email, dismissMessage } = props
   return (
     <div className='min-h-dvh lg:max-w-126 lg:min-h-fit lg:max-h-130 flex flex-col justify-between gap-6 px-6 py-10 lg:p-16 text-neutral-blue-700 bg-white rounded-4xl animate-fade-in-up'>

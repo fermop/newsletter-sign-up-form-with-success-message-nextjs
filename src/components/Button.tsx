@@ -1,4 +1,4 @@
-export default function Button(props) {
+export default function Button(props: any) {
   const { ariaLabel, type, value, handleAction } = props
   return (
     <div>

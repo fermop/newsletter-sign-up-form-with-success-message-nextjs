@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Button from '@/components/Button'
 
-export default function Form(props) {
+export default function Form(props: any) {
   const { email, error, handleChange, handleSubmit } = props
 
   return (
