@@ -8,6 +8,12 @@ interface FormProps {
   handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }
 
+const formListItems = [
+  'Product discovery and building what matters',
+  'Measuring to ensure updates are a success',
+  'And much more!'
+]
+
 export default function Form({ email, error, handleChange, handleSubmit }: FormProps) {
   return (
     <div className='min-h-dvh w-screen lg:max-w-233 lg:min-h-fit lg:max-h-160 flex flex-col justify-between bg-white rounded-4xl lg:flex lg:flex-row-reverse lg:p-6 lg:pl-16 lg:gap-16 animate-fade-in-up'>
@@ -43,39 +49,18 @@ export default function Form({ email, error, handleChange, handleSubmit }: FormP
         <p className='text-base'>Join 60,000+ product managers receiving monthly updates on:</p>      
 
         <ul className='grid gap-2 mb-4'>
-          <li className='flex gap-4'>
-            <Image
-              src='/images/icon-list.svg'
-              alt=''
-              width={44}
-              height={44}
-              className='w-6 h-6'
-            />
-
-            <p>Product discovery and building what matters</p>
-          </li>
-          <li className='flex gap-4'>
-            <Image
-              src='/images/icon-list.svg'
-              alt=''
-              width={44}
-              height={44}
-              className='w-6 h-6'
-            />
-
-            <p>Measuring to ensure updates are a success</p>
-          </li>
-          <li className='flex gap-4'>
-            <Image
-              src='/images/icon-list.svg'
-              alt=''
-              width={44}
-              height={44}
-              className='w-6 h-6'
-            />
-
-            <p>And much more!</p>
-          </li>
+          {formListItems.map((item) => (
+            <li key={item} className='flex gap-4'>
+              <Image
+                src='/images/icon-list.svg'
+                alt=''
+                width={44}
+                height={44}
+                className='w-6 h-6'
+              />
+              <p>{item}</p>
+            </li>
+          ))}
         </ul>
 
         <form 
