@@ -44,7 +44,7 @@ export default function Form({ email, error, handleChange, handleSubmit }: FormP
     src: '/images/illustration-sign-up-desktop.svg',
   })
   return (
-    <div className='min-h-dvh w-screen lg:max-w-233 lg:min-h-fit lg:max-h-160 flex flex-col justify-between bg-white rounded-4xl lg:flex lg:flex-row-reverse lg:p-6 lg:pl-16 lg:gap-16 animate-fade-in-up'>
+    <div className='min-h-dvh w-screen lg:max-w-233 lg:min-h-fit lg:max-h-160 flex flex-col justify-between bg-white lg:rounded-4xl lg:flex lg:flex-row-reverse lg:p-6 lg:pl-16 lg:gap-16 animate-fade-in-up'>
       <section>
         <picture>
           <source media="(min-width: 768px)" srcSet={tablet} />
@@ -52,7 +52,7 @@ export default function Form({ email, error, handleChange, handleSubmit }: FormP
           <img
             {...rest}
             src={mobile}
-            className="w-full h-[40%] lg:h-full object-cover rounded-t-4xl lg:rounded-none lg:rounded-l-2xl" 
+            className="w-full h-[40%] lg:h-full object-cover rounded-2xl" 
           />
         </picture>
       </section>

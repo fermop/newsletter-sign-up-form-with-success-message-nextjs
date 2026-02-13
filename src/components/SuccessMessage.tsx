@@ -8,7 +8,7 @@ interface SuccessMessageProps {
 
 export default function SuccessMessage({ email, dismissMessage}: SuccessMessageProps) {
   return (
-    <div className='min-h-dvh lg:max-w-126 lg:min-h-fit lg:max-h-130 flex flex-col justify-between gap-6 px-6 py-10 lg:p-16 text-neutral-blue-700 bg-white rounded-4xl animate-fade-in-up'>
+    <div className='min-h-dvh lg:max-w-126 lg:min-h-fit lg:max-h-130 flex flex-col justify-between gap-6 px-6 py-10 lg:p-16 text-neutral-blue-700 bg-white lg:rounded-4xl animate-fade-in-up'>
       <section className='flex flex-col gap-6 mt-40 lg:mt-0'>
         <Image 
           src='/images/icon-success.svg'
