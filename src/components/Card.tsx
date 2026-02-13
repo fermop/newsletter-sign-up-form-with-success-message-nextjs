@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Form from '@/components/Form'
 import SuccessMessage from '@/components/SuccessMessage'
 import Loader from '@/components/Loader'
+import { validateEmail } from '@/utils/validations'
 
 export default function Card() {
   const [email, setEmail] = useState('')
@@ -15,16 +16,10 @@ export default function Card() {
     setError(false)
   };
 
-  const validateEmail = (email: string) => {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-  };
-
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    if (!email || !validateEmail(email)) {
+    if (!validateEmail(email)) {
       setError(true)
       return
     }
