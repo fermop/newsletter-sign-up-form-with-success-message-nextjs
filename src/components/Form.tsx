@@ -52,7 +52,7 @@ export default function Form({ email, error, handleChange, handleSubmit }: FormP
           <img
             {...rest}
             src={mobile}
-            className="w-full h-[40%] lg:h-full object-cover rounded-2xl" 
+            className="w-full h-[40%] lg:h-full object-cover lg:rounded-2xl" 
           />
         </picture>
       </section>
